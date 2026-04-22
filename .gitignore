@@ -21,5 +21,3 @@ erl_crash.dump
 
 # Ignore package tarball (built via "mix hex.build").
 kino_shot_ds-*.tar
-
-*/node_modules/
