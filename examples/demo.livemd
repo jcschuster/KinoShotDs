@@ -2,7 +2,7 @@
 
 ```elixir
 Mix.install([
-  {:kino_shot_ds, path: Path.join(__DIR__, "..")}
+  {:kino_shot_ds, "~> 0.1"}
 ])
 ```
 
@@ -11,11 +11,11 @@ Mix.install([
 <!-- livebook:{"attrs":"eyJjb250ZXh0X3N0ciI6IiIsImZvcm11bGFfc3RyIjoiIVtYIDogJG9dOiBYID0+IFgiLCJtb2RlIjoiZm9ybXVsYSIsInByb2JsZW1fc3RyIjoidGhmKHRlc3QsIGNvbmplY3R1cmUsICR0cnVlID0+ICR0cnVlKS4iLCJ0aGVtZSI6IkRyYWN1bGEiLCJ2YXJfbmFtZSI6InBhcnNlZF9mb3JtdWxhX29yX3Byb2JsZW0ifQ","chunks":null,"kind":"Elixir.KinoShotDs.TptpParser","livebook_object":"smart_cell"} -->
 
 ```elixir
-formula = "![X : $o]: X => X"
+problem = "thf(test, conjecture, $true => $true)."
 
 parsed_formula_or_problem =
-  case ShotDs.Parser.parse(formula) do
-    {:ok, term_id} -> term_id
+  case ShotDs.Tptp.parse_tptp_string(problem) do
+    {:ok, parsed} -> parsed
     {:error, reason} -> raise "Error: #{inspect(reason)}"
   end
 
