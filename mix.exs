@@ -1,7 +1,7 @@
 defmodule KinoShotDs.MixProject do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "0.1.1"
   @source_url "https://github.com/jcschuster/KinoShotDs"
 
   def project do
@@ -29,8 +29,8 @@ defmodule KinoShotDs.MixProject do
   defp deps do
     [
       {:kino, "~> 0.19"},
-      {:shot_ds, "~> 1.0"},
-      {:ex_doc, "~> 0.40"}
+      {:shot_ds, "~> 1.1"},
+      {:ex_doc, "~> 0.40", only: :dev, runtime: false}
     ]
   end
 
