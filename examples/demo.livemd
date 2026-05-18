@@ -8,10 +8,10 @@ Mix.install([
 
 ## TPTP Parser
 
-<!-- livebook:{"attrs":"eyJjb250ZXh0X3N0ciI6IiIsImZvcm11bGFfc3RyIjoiIVtYIDogJG9dOiBYID0+IFgiLCJtb2RlIjoiZm9ybXVsYSIsInByb2JsZW1fc3RyIjoidGhmKHRlc3QsIGNvbmplY3R1cmUsICR0cnVlID0+ICR0cnVlKS4iLCJ0aGVtZSI6IkRyYWN1bGEiLCJ2YXJfbmFtZSI6InBhcnNlZF9mb3JtdWxhX29yX3Byb2JsZW0ifQ","chunks":null,"kind":"Elixir.KinoShotDs.TptpParser","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":"eyJjb250ZXh0X3N0ciI6IiIsImZvcm11bGFfc3RyIjoiIVtYIDogJG9dOiBYID0+IFgiLCJtb2RlIjoicHJvYmxlbSIsInByb2JsZW1fc3RyIjoidGhmKHRlc3QsIGNvbmplY3R1cmUsICR0cnVlID0+ICdjLzAnKS5cclxuIiwidGhlbWUiOiJEcmFjdWxhIiwidmFyX25hbWUiOiJwYXJzZWRfZm9ybXVsYV9vcl9wcm9ibGVtIn0","chunks":null,"kind":"Elixir.KinoShotDs.TptpParser","livebook_object":"smart_cell"} -->
 
 ```elixir
-problem = "thf(test, conjecture, $true => $true)."
+problem = "thf(test, conjecture, $true => 'c/0').\r\n"
 
 parsed_formula_or_problem =
   case ShotDs.Tptp.parse_tptp_string(problem) do
